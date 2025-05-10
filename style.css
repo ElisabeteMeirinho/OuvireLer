@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfcfc;
+  margin: 0;
+  padding: 0;
+  color: #600b30;
+}
+.logo-container {
+  text-align: center;
+  margin-top: 10px;
+}
+.logo {
+  max-width: 140px;
+}
+.frase {
+  text-align: center;
+  font-size: 15px;
+  margin: 10px 0 20px;
+}
+.container {
+  text-align: center;
+}
+.main-btn {
+  background-color: #600b30;
+  color: white;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 10px;
+}
+.main-btn:hover {
+  background-color: #800f3f;
+}
+.transcript-box {
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #600b30;
+  padding: 1rem;
+  font-size: 1.1rem;
+  min-height: 100px;
+  margin: 1rem auto;
+  box-shadow: 0 0 10px rgba(96, 11, 48, 0.2);
+  max-width: 600px;
+  white-space: pre-wrap;
+}
+.top-bar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.modo-btn, .home-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #600b30;
+}
+.nome-input {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #600b30;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}

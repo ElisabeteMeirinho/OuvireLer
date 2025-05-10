@@ -1,0 +1,17 @@
+
+name: ouvir_e_ler
+description: App acessível para transcrição de fala com modo compartilhado via Bluetooth.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_blue_plus: ^1.32.4
+  cupertino_icons: ^1.0.2
+  
+
+  

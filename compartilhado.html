@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modo Compartilhado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button onclick="voltarInicio()" class="botao-home">
+    <img src="home-icon.png" width="30" height="30" class="icon-home" alt="Início" />
+  </button>
+</div>
+  <div class="container">
+    <img src="logo.png" alt="Logo do App" class="logo" />
+    <p class="frase">Por mais inclusão nas conversas do dia a dia.</p>
+  </header>
+  <main class="container">
+    <input type="text" id="nomeUsuario" placeholder="Digite seu nome" class="nome-input" />
+    <button onclick="conectarBluetooth()" class="main-btn">🔗 Conectar via Bluetooth</button>
+    <button onclick="startSharedTranscription()" class="main-btn">🎤 Começar Transcrição</button>
+    <div id="shared-transcript" class="transcript-box"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
