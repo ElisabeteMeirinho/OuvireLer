@@ -7,20 +7,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button onclick="window.location.href='compartilhado.html'" class="botao-compartilhado">
-    <img src="bluetooth.png" width="20" height="20" class="icon" alt="Bluetooth" />
-    Modo Compartilhado
-  </button>
-
   <div class="container">
     <img src="logo.png" alt="Logo do App" class="logo" />
     <p class="frase">Por mais inclusão nas conversas do dia a dia.</p>
-
-    <button onclick="startTranscription()" class="main-btn">🎤 Ouvir e Transcrever</button>
+    <button onclick="startTranscription()" class="main-btn">🎤 Começar Transcrição</button>
     <div id="transcript" class="transcript-box"></div>
+    <a href="compartilhado.html" class="botao-compartilhado">Ir para modo compartilhado</a>
   </div>
-
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
-
