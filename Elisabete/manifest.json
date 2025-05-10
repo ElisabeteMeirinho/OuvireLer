@@ -1,0 +1,16 @@
+
+{
+  "name": "Ouvir e Ler",
+  "short_name": "OuvirLer",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#600b30",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#600b30" />
+  <title>Ouvir e Ler</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: white;
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+    header {
+      background-color: white;
+      color: #600b30;
+      padding: 1rem;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    #transcript {
+      background: white;
+      border-radius: 20px;
+      border: 2px solid #600b30;
+      padding: 1rem;
+      font-size: 1.2rem;
+      min-height: 100px;
+      margin-top: 2rem;
+      box-shadow: 0 0 10px rgba(96, 11, 48, 0.2);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-wrap;
+    }
+    button {
+      background-color: #600b30;
+      color: white;
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #800f3f;
+    }
+  </style>
+</head>
+<body>
+<img src="logo.png" alt="Logo Ouvir e Ler" style="max-width:120px; display:block; margin: 20px auto;">
+  <header>
+    Por mais inclusão nas conversas do dia a dia.
+  </header>
+
+  <button onclick="iniciarTranscricao()">Iniciar Transcrição</button>
+  <div id="transcript">O texto transcrito aparecerá aqui...</div>
+
+  <script>
+    let reconhecimento;
+    function iniciarTranscricao() {
+      if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
+        alert('Seu navegador não suporta reconhecimento de voz. Tente no Chrome.');
+        return;
+      }
+
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      reconhecimento = new SpeechRecognition();
+      reconhecimento.lang = 'pt-BR';
+      reconhecimento.continuous = true;
+      reconhecimento.interimResults = true;
+
+      reconhecimento.onresult = function(event) {
+        let texto = '';
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          texto += event.results[i][0].transcript;
+        }
+        document.getElementById('transcript').textContent = texto;
+      };
+
+      reconhecimento.start();
+    }
+  </script>
+</body>
+</html>
